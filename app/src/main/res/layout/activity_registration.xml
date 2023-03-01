@@ -46,7 +46,7 @@
             android:textSize="28sp" />
 
         <Button
-            android:id="@+id/log_in_btn"
+            android:id="@+id/login_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
