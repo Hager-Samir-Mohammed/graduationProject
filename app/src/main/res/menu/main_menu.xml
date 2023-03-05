@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_search"
+        android:title="Search"
+        android:icon="@drawable/ic_baseline_search_24"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_notification"
+        android:title="Notifications"
+        app:actionLayout="@layout/custom_notification_item"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_more"
+        android:title=""
+        android:icon="@drawable/ic_baseline_more_vert_24"
+        app:showAsAction="always">
+        <menu>
+            <item android:id="@+id/menu_settings"
+                android:title="Settings"
+                android:icon="@drawable/ic_baseline_settings_24"
+                app:showAsAction="ifRoom"
+                />
+            <item android:id="@+id/menu_help"
+                android:title="Help and support"
+                android:icon="@drawable/ic_baseline_help_24"
+                app:showAsAction="ifRoom"
+                />
+            <item android:id="@+id/menu_scanQR"
+                android:title="Scan QR code"
+                android:icon="@drawable/ic_baseline_qr_code_scanner_24"
+                app:showAsAction="ifRoom"
+                />
+            <item android:id="@+id/menu_logout"
+                android:title="Log out"
+                android:icon="@drawable/ic_baseline_logout_24"
+                app:showAsAction="ifRoom"
+                />
+        </menu>
+    </item>
+</menu>

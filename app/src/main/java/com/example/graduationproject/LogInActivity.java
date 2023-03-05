@@ -30,7 +30,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 public class LogInActivity extends AppCompatActivity {
     private EditText email_et, password_et;
     private Button login_btn;
-    private TextView register_tv;
+    private TextView register_tv, forget;
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
     SignInButton signInWithGoogle;
@@ -48,6 +48,7 @@ public class LogInActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.login_bp);
         signInWithGoogle = findViewById(R.id.login_login_with_google);
+        forget = findViewById(R.id.login_tv_forget);
 
 
         register_tv.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +71,41 @@ public class LogInActivity extends AppCompatActivity {
             }
         });
 
+        forgetPassword();
+
     }
+     private void forgetPassword(){
+         forget.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 if(email_et.getText().toString().length()>6){
+                     progressBar.setVisibility(View.VISIBLE);
+                     FirebaseAuth auth = FirebaseAuth.getInstance();
+                     String emailAddress = email_et.getText().toString();
+
+                     auth.sendPasswordResetEmail(emailAddress)
+                             .addOnCompleteListener(new OnCompleteListener() {
+                                 @Override
+                                 public void onComplete(@NonNull Task task) {
+                                     if (task.isSuccessful()) {
+                                         Toast.makeText(LogInActivity.this, "We have sent an email", Toast.LENGTH_SHORT).show();
+                                     }
+                                     else {
+                                         Toast.makeText(LogInActivity.this, "There is an error", Toast.LENGTH_SHORT).show();
+
+                                     }
+                                 }
+                             });
+                 } else{
+                     email_et.setError("Entar valid email");
+                 }
+
+
+             }
+         });
+     }
+
+
 
     private void loginWithEmail(String email, String password) {
         if (email.length() > 5 && password.length() > 6) {
@@ -84,6 +119,8 @@ public class LogInActivity extends AppCompatActivity {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 Toast.makeText(LogInActivity.this, "Welcome back :)",
                                         Toast.LENGTH_SHORT).show();
+                                Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+                                startActivity(i);
                             } else {
                                 Toast.makeText(LogInActivity.this, "Wrong email or password",
                                         Toast.LENGTH_SHORT).show();

@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class RegisterActivity extends AppCompatActivity {
-private EditText firstName_et, lastName_et, email_et, password_et;
+private EditText firstName_et, email_et, password_et;
 private Button register_btn;
 private TextView login_tv;
 private FirebaseAuth mAuth;
@@ -32,7 +32,6 @@ private ProgressBar progressBar;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         firstName_et = findViewById(R.id.register_et_fn);
-        lastName_et = findViewById(R.id.register_et_ln);
         email_et = findViewById(R.id.register_et_email);
         password_et = findViewById(R.id.register_et_password);
         register_btn = findViewById(R.id.register_btn_register);
@@ -55,6 +54,7 @@ private ProgressBar progressBar;
                 registerWithEmail(email_et.getText().toString(), password_et.getText().toString());
             }
         });
+
     }
 
     private void registerWithEmail(String email, String password){
