@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:title="SUPER Book Fair"
     app:titleTextColor="@color/white"
-    android:background="@color/lavander">
+    android:background="@color/beige">
 
 
 </androidx.appcompat.widget.Toolbar>

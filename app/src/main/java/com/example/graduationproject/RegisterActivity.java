@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class RegisterActivity extends AppCompatActivity {
-private EditText firstName_et, email_et, password_et;
+private EditText fullName_et, email_et, password_et;
 private Button register_btn;
 private TextView login_tv;
 private FirebaseAuth mAuth;
@@ -31,7 +31,7 @@ private ProgressBar progressBar;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        firstName_et = findViewById(R.id.register_et_fn);
+        fullName_et = findViewById(R.id.register_et_fn);
         email_et = findViewById(R.id.register_et_email);
         password_et = findViewById(R.id.register_et_password);
         register_btn = findViewById(R.id.register_btn_register);
@@ -75,13 +75,14 @@ private ProgressBar progressBar;
                                             public void onComplete(@NonNull Task task) {
                                                 if (task.isSuccessful()) {
                                                     Toast.makeText(RegisterActivity.this, "Check your email, verified message sent", Toast.LENGTH_SHORT).show();
+                                                    finish();
                                                 }else{
                                                     Toast.makeText(RegisterActivity.this, "There is an error", Toast.LENGTH_SHORT).show();
                                                 }
                                             }
                                         });
                             } else {
-                                Toast.makeText(RegisterActivity.this, "Authentication failed.",
+                                Toast.makeText(RegisterActivity.this, "Authentication failed",
                                         Toast.LENGTH_SHORT).show();
                             }
                         }
@@ -90,9 +91,12 @@ private ProgressBar progressBar;
         } else {
             if (email.length()<5){
             email_et.setError("Email not valid");
-        } if(password.length()<=6){
-            password_et.setError("Password should be more 6 chars");
-        }
+        }if(password.length()<=6){
+                Toast.makeText(RegisterActivity.this, "Password should be more 6 chars",
+                        Toast.LENGTH_SHORT).show();
+        }if(fullName_et.getText().toString().length()==0){
+                fullName_et.setError("Enter your name");
+            }
     }
 }
 }

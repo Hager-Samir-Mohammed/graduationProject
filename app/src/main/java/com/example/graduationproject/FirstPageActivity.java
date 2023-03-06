@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -18,13 +21,16 @@ public class FirstPageActivity extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Intent i = new Intent(getApplicationContext(),RegistrationActivity.class);
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                if(user!=null){
+                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                }
+               else{ Intent i = new Intent(getApplicationContext(),RegistrationActivity.class);
                 startActivity(i);
             }
-        }, 3000);
+            }
+        }, 3500);
 
 
     }
-
-
 }

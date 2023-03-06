@@ -33,10 +33,10 @@ public class LogInActivity extends AppCompatActivity {
     private TextView register_tv, forget;
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
-    SignInButton signInWithGoogle;
+    SignInButton signInWithGoogle_btn;
     GoogleSignInClient googleSignInClient;
-    FirebaseAuth firebaseAuth;
-
+    GoogleSignInOptions googleSignInOptions;
+    FirebaseAuth firebaseAuth  = FirebaseAuth.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +47,7 @@ public class LogInActivity extends AppCompatActivity {
         register_tv = findViewById(R.id.login_tv_register);
         mAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.login_bp);
-        signInWithGoogle = findViewById(R.id.login_login_with_google);
+        signInWithGoogle_btn = findViewById(R.id.login_login_with_google);
         forget = findViewById(R.id.login_tv_forget);
 
 
@@ -64,47 +64,43 @@ public class LogInActivity extends AppCompatActivity {
                 loginWithEmail(email_et.getText().toString(), password_et.getText().toString());
             }
         });
-        signInWithGoogle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                loginGoogle();
-            }
-        });
 
+        loginWithGoogle();
         forgetPassword();
 
     }
-     private void forgetPassword(){
-         forget.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View view) {
-                 if(email_et.getText().toString().length()>6){
-                     progressBar.setVisibility(View.VISIBLE);
-                     FirebaseAuth auth = FirebaseAuth.getInstance();
-                     String emailAddress = email_et.getText().toString();
-
-                     auth.sendPasswordResetEmail(emailAddress)
-                             .addOnCompleteListener(new OnCompleteListener() {
-                                 @Override
-                                 public void onComplete(@NonNull Task task) {
-                                     if (task.isSuccessful()) {
-                                         Toast.makeText(LogInActivity.this, "We have sent an email", Toast.LENGTH_SHORT).show();
-                                     }
-                                     else {
-                                         Toast.makeText(LogInActivity.this, "There is an error", Toast.LENGTH_SHORT).show();
-
-                                     }
-                                 }
-                             });
-                 } else{
-                     email_et.setError("Entar valid email");
-                 }
 
 
-             }
-         });
-     }
+    private void forgetPassword() {
+        forget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (email_et.getText().toString().length() > 6) {
+                    progressBar.setVisibility(View.VISIBLE);
+                    FirebaseAuth auth = FirebaseAuth.getInstance();
+                    String emailAddress = email_et.getText().toString();
 
+                    auth.sendPasswordResetEmail(emailAddress)
+                            .addOnCompleteListener(new OnCompleteListener() {
+                                @Override
+                                public void onComplete(@NonNull Task task) {
+                                    progressBar.setVisibility(View.GONE);
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(LogInActivity.this, "We have sent an email", Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        Toast.makeText(LogInActivity.this, "There is an error", Toast.LENGTH_SHORT).show();
+
+                                    }
+                                }
+                            });
+                } else {
+                    email_et.setError("Enter valid email");
+                }
+
+
+            }
+        });
+    }
 
 
     private void loginWithEmail(String email, String password) {
@@ -117,10 +113,16 @@ public class LogInActivity extends AppCompatActivity {
                             progressBar.setVisibility(View.GONE);
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
-                                Toast.makeText(LogInActivity.this, "Welcome back :)",
-                                        Toast.LENGTH_SHORT).show();
-                                Intent i = new Intent(getApplicationContext(), HomeActivity.class);
-                                startActivity(i);
+                                if (user.isEmailVerified()) {
+                                    Toast.makeText(LogInActivity.this, "Welcome back :)",
+                                            Toast.LENGTH_SHORT).show();
+                                    Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+                                    startActivity(i);
+                                } else {
+                                    Toast.makeText(LogInActivity.this, "Please Verify your account",
+                                            Toast.LENGTH_SHORT).show();
+                                    finish();
+                                }
                             } else {
                                 Toast.makeText(LogInActivity.this, "Wrong email or password",
                                         Toast.LENGTH_SHORT).show();
@@ -133,25 +135,27 @@ public class LogInActivity extends AppCompatActivity {
                 email_et.setError("Email not valid");
             }
             if (password.length() <= 6) {
-                password_et.setError("Password should be more 6 chars");
+                Toast.makeText(LogInActivity.this, "Password should be more 6 chars",
+                        Toast.LENGTH_SHORT).show();
             }
+
         }
     }
 
-    private void loginGoogle(){
-        GoogleSignInOptions googleSignInOptions=new GoogleSignInOptions.Builder(
+
+    private void loginWithGoogle(){
+        googleSignInOptions = new GoogleSignInOptions.Builder(
                 GoogleSignInOptions.DEFAULT_SIGN_IN
         ).requestIdToken("521969625817-67lqdntbhicjdr35gsnf26okjnksgm0c.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
         googleSignInClient= GoogleSignIn.getClient(LogInActivity.this
                 ,googleSignInOptions);
-        firebaseAuth = FirebaseAuth.getInstance();
-        signInWithGoogle.setOnClickListener(new View.OnClickListener() {
+        signInWithGoogle_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Initialize sign in intent
-                Intent intent=googleSignInClient.getSignInIntent();
+                Intent intent = googleSignInClient.getSignInIntent();
                 // Start activity for result
                 startActivityForResult(intent,100);
             }
