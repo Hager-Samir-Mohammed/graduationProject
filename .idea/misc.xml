@@ -3,52 +3,40 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/graduationProject/app/src/main/res/drawable/book_border.xml" value="0.1435" />
+        <entry key="..\:/Android/graduationProject/app/src/main/res/drawable/border_text.xml" value="0.144" />
+        <entry key="..\:/Android/graduationProject/app/src/main/res/drawable/nav_background.xml" value="0.2165" />
+        <entry key="..\:/Android/graduationProject/app/src/main/res/layout/activity_cart.xml" value="0.209375" />
+        <entry key="..\:/Android/graduationProject/app/src/main/res/layout/activity_first_books.xml" value="0.209375" />
+        <entry key="..\:/Android/graduationProject/app/src/main/res/layout/activity_fourth_books.xml" value="0.22" />
+        <entry key="..\:/Android/graduationProject/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Android/graduationProject/app/src/main/res/layout/activity_log_in.xml" value="0.209375" />
+        <entry key="..\:/Android/graduationProject/app/src/main/res/layout/activity_main_books.xml" value="0.209375" />
+        <entry key="..\:/Android/graduationProject/app/src/main/res/layout/activity_second_books.xml" value="0.209375" />
+        <entry key="..\:/Android/graduationProject/app/src/main/res/layout/activity_third_books.xml" value="0.25" />
+        <entry key="..\:/Android/graduationProject/app/src/main/res/layout/toolbar.xml" value="0.22" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/bg_first_page.xml" value="0.1" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/bg_img.xml" value="0.1" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/bg_tv.xml" value="0.1" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/bg_tv_not_pressed.xml" value="0.1" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/bg_tv_pressed.xml" value="0.1" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/btn_bg.xml" value="0.1" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/custom_notification_shape.xml" value="0.1" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/ic_baseline_date_range_24.xml" value="0.1" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.1" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/ic_baseline_help_24.xml" value="0.1" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/ic_baseline_library_books_24.xml" value="0.1" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/ic_baseline_local_library_24.xml" value="0.1" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.1" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/ic_baseline_logout_24.xml" value="0.1" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/ic_baseline_more_vert_24.xml" value="0.1" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/ic_baseline_notifications_24.xml" value="0.1" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/ic_baseline_shopping_basket_24.xml" value="0.1" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/ic_launcher2_background.xml" value="0.1" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/ic_outline_settings_24.xml" value="0.1" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/nav_background.xml" value="0.1" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/sbf_name.xml" value="0.135" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/tv_bg2.xml" value="0.1" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/drawable/underline_tv.xml" value="0.1" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/layout/activity_cart.xml" value="0.1796875" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/layout/activity_first_page.xml" value="0.1796875" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/layout/activity_home.xml" value="0.1796875" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/layout/activity_log_in.xml" value="0.1796875" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/layout/activity_my_library.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/layout/activity_publishing_houses.xml" value="0.1796875" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/layout/activity_registration.xml" value="0.1796875" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/layout/activity_setting.xml" value="0.1796875" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/layout/bg_first_page.xml" value="0.1796875" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/layout/custom_notification_item.xml" value="0.1796875" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/layout/toolbar.xml" value="0.1796875" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/menu/bottom_nav.xml" value="0.1796875" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/menu/maim_menu.xml" value="0.1796875" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/menu/main_menu.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher2.xml" value="0.1" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher2_round.xml" value="0.1" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/graduationProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -12,6 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GraduationProject">
         <activity
+            android:name=".FourthBooks"
+            android:exported="false" />
+        <activity
+            android:name=".ThirdBooks"
+            android:exported="false" />
+        <activity
+            android:name=".SecondBooks"
+            android:exported="false" />
+        <activity
+            android:name=".FirstBooks"
+            android:exported="false" />
+        <activity
+            android:name=".MainBooks"
+            android:exported="false" />
+        <activity
             android:name=".CartActivity"
             android:exported="false" />
         <activity
