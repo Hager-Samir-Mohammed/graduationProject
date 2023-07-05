@@ -57,7 +57,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingStart="@dimen/_2sdp"
-                    android:text="الإصدارات المجانية"
+                    android:text="الإصدارات "
                     android:textSize="@dimen/_20ssp"
                     android:background="@drawable/border_text"
                     android:textStyle="bold"
