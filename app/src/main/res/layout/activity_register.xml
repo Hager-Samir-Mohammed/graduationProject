@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:text="Create your account"
         android:textColor="@color/beige"
-        android:textSize="34sp"
+        android:textSize="@dimen/_34ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,9 +37,9 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/_8sdp"
         android:orientation="vertical"
-        android:padding="4dp"
+        android:padding="@dimen/_4sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,34 +50,34 @@
             android:id="@+id/register_et_fn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
+            android:layout_margin="@dimen/_4sdp"
             android:background="@drawable/bg_tv"
             android:drawableLeft="@drawable/ic_baseline_person_24"
-            android:drawablePadding="8dp"
+            android:drawablePadding="@dimen/_8sdp"
             android:ems="10"
             android:hint="Full name"
             android:inputType="textPersonName"
-            android:padding="16dp"
-            android:textSize="18sp" />
+            android:padding="@dimen/_16sdp"
+            android:textSize="@dimen/_18ssp" />
 
 
         <EditText
             android:id="@+id/register_et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
+            android:layout_margin="@dimen/_4sdp"
             android:background="@drawable/bg_tv"
             android:drawableLeft="@drawable/ic_baseline_email_24"
-            android:drawablePadding="8dp"
+            android:drawablePadding="@dimen/_8sdp"
             android:ems="10"
             android:hint="Email"
             android:inputType="textEmailAddress"
-            android:padding="16dp" />
+            android:padding="@dimen/_16sdp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
+            android:layout_margin="@dimen/_4sdp"
             app:hintEnabled="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -93,12 +93,12 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_tv"
                 android:drawableStart="@drawable/ic_baseline_lock_24"
-                android:drawablePadding="8dp"
+                android:drawablePadding="@dimen/_8sdp"
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:padding="16dp"
-                android:textSize="18sp"
+                android:padding="@dimen/_16sdp"
+                android:textSize="@dimen/_18ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.526"
@@ -124,46 +124,46 @@
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
+            android:layout_margin="@dimen/_4sdp"
             android:background="@drawable/bg_tv"
             android:orientation="horizontal"
-            android:padding="4dp">
+            android:padding="@dimen/_4sdp">
 
             <RadioButton
                 android:id="@+id/register_rb_male"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
+                android:layout_margin="@dimen/_4sdp"
                 android:layout_weight="1"
                 android:buttonTint="@color/purple2"
-                android:padding="8dp"
+                android:padding="@dimen/_8sdp"
                 android:text="Male"
-                android:textSize="24sp" />
+                android:textSize="@dimen/_24ssp" />
 
             <RadioButton
                 android:id="@+id/register_rb_female"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
+                android:layout_margin="@dimen/_4sdp"
                 android:layout_weight="1"
                 android:buttonTint="@color/purple2"
-                android:padding="8dp"
+                android:padding="@dimen/_8sdp"
                 android:text="Female"
-                android:textSize="24sp" />
+                android:textSize="@dimen/_24ssp" />
         </RadioGroup>
     </LinearLayout>
 
     <Button
         android:id="@+id/register_btn_register"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/_10sdp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/_8sdp"
         android:background="@drawable/btn_bg"
-        android:padding="8dp"
+        android:padding="@dimen/_8sdp"
         android:text="Register"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="28sp"
+        android:textSize="@dimen/_28ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -175,7 +175,7 @@
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/_8sdp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -187,19 +187,19 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
+            android:layout_margin="@dimen/_4sdp"
             android:text="Already have account?"
             android:textColor="@color/beige"
-            android:textSize="22sp" />
+            android:textSize="@dimen/_22ssp" />
 
         <TextView
             android:id="@+id/register_tv_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
+            android:layout_margin="@dimen/_4sdp"
             android:text="Login"
             android:textColor="@color/purple2"
-            android:textSize="22sp" />
+            android:textSize="@dimen/_22ssp" />
     </LinearLayout>
 
 

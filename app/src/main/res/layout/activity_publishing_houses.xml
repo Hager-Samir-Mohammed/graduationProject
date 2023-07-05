@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:gravity="center"
-        android:textSize="24sp"
+        android:textSize="@dimen/_24ssp"
         android:textColor="@color/beige"
         app:layout_constraintTop_toTopOf="parent" />
 
